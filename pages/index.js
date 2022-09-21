@@ -1,23 +1,42 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from "@mui/material/Typography";
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <React.Fragment>
+        <Container maxWidth="md">
+          <Box sx={{ bgcolor: '#cfe8fc' }} />
+            <Box
+                sx={{
+                    height: 100,
+                    backgroundColor: '#f4f4f4',
+                }}
+            >
+                <Typography variant="h1" component="h2">
+                    h1. Heading
+                </Typography>
+            </Box>
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
+            <Grid container spacing={2}>
+                <Grid xs={8}>
+                    <Typography variant="body1" component="h2">
+                     hello
+                    </Typography>
 
-      <Footer />
-    </div>
-  )
+                </Grid>
+                <Grid xs={4}>
+                    <Typography variant="body2" component="h2">
+                      hello
+                    </Typography>
+
+                </Grid>
+            </Grid>
+        </Container>
+      </React.Fragment>
+  );
 }
